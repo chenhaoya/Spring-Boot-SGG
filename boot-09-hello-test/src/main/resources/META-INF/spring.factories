@@ -1,0 +1,11 @@
+# Application Context Initializers
+org.springframework.context.ApplicationContextInitializer=\
+  com.ch.boot09hellotest.listener.MyApplicationContextInitializer
+
+# Run Listeners
+org.springframework.context.ApplicationListener=\
+  com.ch.boot09hellotest.listener.MyApplicationListener
+
+# Run Listeners
+org.springframework.boot.SpringApplicationRunListener=\
+  com.ch.boot09hellotest.listener.MySpringApplicationRunListener

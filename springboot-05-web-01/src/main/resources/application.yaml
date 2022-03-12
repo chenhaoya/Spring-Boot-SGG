@@ -1,0 +1,19 @@
+#设置静态资源路径，默认/**
+#spring:
+#  mvc:
+#     static-path-pattern: /sources/**
+#
+#spring:
+#  web:
+#    resources:
+#      static-locations: [classpath:/abc/]
+spring:
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+#    开启参数方式的内容协商
+    contentnegotiation:
+      favor-parameter: true
+

@@ -1,0 +1,32 @@
+/**
+ * 开发团队：复仇者联盟
+ * 开发团队领导人：陈浩
+ * 开发人员姓名：陈浩
+ * 学号/工号：2019112102
+ * 个人/公司邮箱：ch111222@qq.com
+ * 时间：2022/3/11 23:05
+ * 开发名称：HelloController
+ * 开发工具：IntelliJ IDEA
+ * 当前用户：CH
+ * 描述：
+ */
+package com.ch.boot09hellotest.controller;
+
+import com.ch.hello.bean.HelloService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
+
+@Controller
+public class HelloController {
+
+    @Autowired
+    HelloService helloService;
+
+    @ResponseBody
+    @GetMapping("hello")
+    public String sayHello(){
+        return helloService.sayHello("牛");
+    }
+}

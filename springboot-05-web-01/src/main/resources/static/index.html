@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>SpringBoot 欢迎你static</h1>
+<form action="/user" method="get">
+    <input value="REST-GET 提交" type="submit">
+</form>
+<form action="/user" method="post">
+    <input value="REST-POST 提交" type="submit">
+</form>
+<form action="/user" method="post">
+    <input name="_method" type="hidden" value="DELETE">
+    <input value="REST-DELETE 提交" type="submit">
+</form>
+<form action="/user" method="post">
+    <input name="_m" type="hidden" value="PUT">
+    <input value="REST-PUT 提交" type="submit">
+</form>
+
+<a href="/car/3/owner/lisi/23?aa=111&inters=basketball&inters=game">/car/{id}/owner/{username}/{age}</a>
+
+
+<form action="/save" method="post">
+    测试@RequestBody获取数据 <br>
+    用户名：<input type="text" name="userName">
+    邮箱：<input type="text" name="email">
+    <input type="submit" value="提交">
+</form>
+
+<a href="/cars/shell;low=34;brand=byd,audi,yd">@MatrixVariable(矩阵变量)</a><br>
+<a href="/cars/shell;low=34;brand=byd;brand=audi;brand=yd">@MatrixVariable(矩阵变量)</a><br>
+<a href="/boss/1;age=20/2;age=10">@MatrixVariable(矩阵变量) /boos/{boosID}/{empID}</a><br>
+
+<a href="/aaa.html">自定义参数对象测试</a>
+</body>
+</html>
